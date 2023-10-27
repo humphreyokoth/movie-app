@@ -1,0 +1,103 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+  
+  header {
+    background-color: #202020;
+    color: #fff;
+    padding: 10px 0;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav ul li:last-child {
+    margin-right: 0;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 600px; 
+  }
+  
+  .movie-listings {
+    display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 150px);
+  grid-gap: 10px;
+    
+  }
+  
+  .movie {
+    border: 1px solid #3333;
+    margin: 20px;
+ }
+
+ #addMovieDialog {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+}
+.edit-icon,
+.delete-icon {
+  float: right;
+  color: #555;
+  cursor: pointer;
+}
+
+.edit-icon:hover,
+.delete-icon:hover {
+  color: #000;
+}
+
+/* Backdrop */
+#addMovieDialog::backdrop {
+  background: rgba(0,0,0,0.5);
+}
+
+  footer {
+    text-align: center;
+    background-color: #202020;
+    color: #fff;
+    padding: 10px 0;
+  }
+
+  
