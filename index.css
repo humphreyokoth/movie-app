@@ -1,118 +1,129 @@
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-  }
-  
-  header {
-    background-color: #202020;
-    color: #fff;
-    padding: 10px 0;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  nav .logo {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-  }
-  
-  nav ul li {
-    margin-right: 20px;
-  }
-  
-  nav ul li:last-child {
-    margin-right: 0;
-  }
-  
-  nav a {
-    text-decoration: none;
-    color: #fff;
-  }
-  
-  main {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    min-height: 600px; 
-  }
-  /* Form css */
-   .custom-form {
-      padding: 20px;
-      width: 300px; 
-    }
-    .custom-input {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      outline: none;
-    }
-    .custom-button {
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      margin-left: 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 10px;
-  }
-    .custom-button:hover {
-      background-color: #0056b3;
-    }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  overflow: hidden;
+
+}
+
+header {
+  background-color: #202020;
+  color: #fff;
+  padding: 10px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+nav .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+main {
+  height: 100vh;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 20px auto;
+  padding: 0 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  min-height: 600px;
+}
+
+/* Form css */
+.custom-form {
+  padding: 20px;
+  width: 300px;
+}
+
+.custom-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.custom-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.custom-button:hover {
+  background-color: #0056b3;
+}
 
 
 
 
 
-  .movie-listings {
-    display: grid;
+
+.movie-listings {
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 150px);
   grid-gap: 10px;
   position: relative;
-    
-  }
-  
-  .movie {
-    border: 1px solid #3333;
-    margin: 20px;
-    position: relative;
- }
- .rating {
+
+}
+
+.movie {
+  border: 1px solid #3333;
+  margin: 20px;
+  position: relative;
+}
+
+.rating {
   position: relative;
   bottom: -70px;
   left: 10px;
   color: #ffcc00;
   font-size: 0;
 }
+
 .rating .fas.fa-star {
-  font-size: 20px; 
+  font-size: 20px;
 }
+
 .rating .fas.fa-star,
 .rating .far.fa-star {
   margin: 0 1%;
@@ -120,20 +131,24 @@
 
 
 .rating .far.fa-star {
-  font-size: 20px; 
-  color: #ccc; 
+  font-size: 20px;
+  color: #ccc;
 }
- #addMovieDialog {
+
+#addMovieDialog {
   border: 1px solid #ccc;
   padding: 20px;
   border-radius: 10px;
 }
+
 i.fas.fa-trash.delete-icon {
   padding: 16px;
 }
+
 i.fas.fa-edit.edit-icon {
   padding: 16px;
 }
+
 .edit-icon,
 .delete-icon {
   float: right;
@@ -148,14 +163,12 @@ i.fas.fa-edit.edit-icon {
 
 /* Backdrop */
 #addMovieDialog::backdrop {
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
 }
 
-  footer {
-    text-align: center;
-    background-color: #202020;
-    color: #fff;
-    padding: 10px 0;
-  }
-
-  
+footer {
+  text-align: center;
+  background-color: #202020;
+  color: #fff;
+  padding: 10px 0;
+}

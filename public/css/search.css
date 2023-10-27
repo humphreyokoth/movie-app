@@ -1,0 +1,31 @@
+/* Styling for the search container */
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-top: 2px;
+}
+
+/* Styling for the search input */
+.search-input {
+    position: relative;
+}
+
+.custom-input {
+    width: 100%;
+    padding: 4px;
+
+    border: 1px solid #ccc;
+    border-radius: 19px;
+
+}
+
+/* Styling for the search icon button */
+.search-icon {
+    position: absolute;
+    right: 5px;
+    top: 30%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
