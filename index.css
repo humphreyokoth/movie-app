@@ -57,7 +57,36 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     min-height: 600px; 
   }
+  /* Form css */
+   .custom-form {
+      padding: 20px;
+      width: 300px; 
+    }
+    .custom-input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+    }
+    .custom-button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .custom-button:hover {
+      background-color: #0056b3;
+    }
   
+
+
+
+
+
   .movie-listings {
     display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -84,7 +113,6 @@
 }
 .rating .fas.fa-star,
 .rating .far.fa-star {
-  font-size: 3vw; 
   margin: 0 1%;
 }
 

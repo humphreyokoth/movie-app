@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="public/style.css/index.css">
+  <link rel="stylesheet" href="public/style.css/login.css">
+  <link rel="stylesheet" href="public/style.css/register.css">
   <title>Movie library</title>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
-
 <body>
   <header>
     <nav>
@@ -21,28 +21,26 @@
       </ul>
     </nav>
   </header>
-
+  
   <main>
-
-    <!-- Dialog contains the form -->
-    <dialog id="addMovieDialog">
-      <form id="addMovieForm">
-        <input name="title">
-        <input name="genre">
-        <input name="plot">
-        <input name="releaseDate">
-        <input name="notes">
-        <input name="rating">
-        <button id="add-btn">Add Movie</button>
-      </form>
-    </dialog>
+  
+    <button id="add-btn" class="custom-button">Add Movie</button>
     
+    <div class="custom-form" id="form-container" style="display: none;">
+      <form id="addMovieForm">
+        <input type="text" name="title" class="custom-input" placeholder="Title">
+        <input type="text" name="genre" class="custom-input" placeholder="Genre">
+        <input type="text" name="plot" class="custom-input" placeholder="Plot">
+        <input type="date" name="releaseDate" class="custom-input" placeholder="Release Date">
+        <input type="text" name="notes" class="custom-input" placeholder="Notes">
+        <input type="text" name="rating" class="custom-input" placeholder="Rating">
+        <button id="add-movie-button" class="custom-button">Add Movie</button>
+      </form>
+    </div>
+</div>
     <div class="movie-listings">
-
-      <div class="movie" onclick="showDetails(this)">
-
-        <img src="#" alt="Movie poster" onclick="changeImage(this)">
-
+      <div class="movie">
+        <img src="#" alt="Movie poster">
         <h2>Movie Title</h2>
         <i class="fas fa-edit edit-icon"></i>
         <i class="fas fa-trash delete-icon"></i>
@@ -53,31 +51,19 @@
           <i class="fas fa-star"></i>
           <i class="far fa-star"></i>
         </div>
-
       </div>
-    
-
-    </div>
-
-    <!-- Details Modal -->
-
-    <div class="modal">
-      <div class="content"></div>
     </div>
 
   </main>
 
-
   <footer>
     <p>&copy; 2023 Movie Library</p>
   </footer>
-
-  <script src="public/api.js"></script>
-  <script src="public/addmovie.js"></script>
-  <script src="public/editmovie.js"></script>
-  <script src="public/deletemovie.js"></script>
-  <script src="public/image.js"></script>
-
+  
+  <script src="public/js/api.js"></script>
+  <script src="public/js/addmovie.js"></script>
+  <script src="public/js/editmovie.js"></script>
+  <script src="public/js/deletemovie.js"></script>
+  <script src="public/js/image.js"></script>
 </body>
-
 </html>
