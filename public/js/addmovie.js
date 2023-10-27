@@ -1,6 +1,6 @@
 
   // Function to add a new movie to the database
-  function addMovieToDatabase(title, genre, plot, releaseDate, notes, rating) {
+  function addMovie(title, genre, plot, releaseDate, notes, rating) {
     // Data to send in the POST request
     const movieData = {
       title,
@@ -52,7 +52,7 @@
     const rating = document.querySelector('input[name="rating"]').value;
   
     // Make a POST request to add the movie to the database using Axios
-    addMovieToDatabase(title, genre, plot, releaseDate, notes, rating);
+    addMovie(title, genre, plot, releaseDate, notes, rating);
   
     // Clear the form inputs
     document.querySelector('input[name="title"]').value = '';
