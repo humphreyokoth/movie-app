@@ -63,14 +63,36 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 150px);
   grid-gap: 10px;
+  position: relative;
     
   }
   
   .movie {
     border: 1px solid #3333;
     margin: 20px;
+    position: relative;
  }
+ .rating {
+  position: relative;
+  bottom: -70px;
+  left: 10px;
+  color: #ffcc00;
+  font-size: 0;
+}
+.rating .fas.fa-star {
+  font-size: 20px; 
+}
+.rating .fas.fa-star,
+.rating .far.fa-star {
+  font-size: 3vw; 
+  margin: 0 1%;
+}
 
+
+.rating .far.fa-star {
+  font-size: 20px; 
+  color: #ccc; 
+}
  #addMovieDialog {
   border: 1px solid #ccc;
   padding: 20px;
