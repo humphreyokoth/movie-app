@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="public/style.css/index.css">
+  <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="public/style.css/login.css">
   <link rel="stylesheet" href="public/style.css/register.css">
   <title>Movie library</title>
@@ -11,59 +11,59 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 <body>
+ 
+  <!-- Header section -->
   <header>
     <nav>
-      <div class="logo">Movie library</div>
+      <!-- Logo of the movie library -->
+      <div class="logo">Movie library</div> 
       <ul>
+        <!-- Navigation links 
         <li><a href="#">Login</a></li>
         <li><a href="#">|</a></li>
-        <li><a href="#">Logout</a></li>
+        -->
+        <li><a href="#">Logout</a></li> 
       </ul>
     </nav>
   </header>
-  
+
+  <!-- Add Movie button -->
+  <button id="add-movie-button" class="custom-button">Add Movie</button>
+
   <main>
-  
-    <button id="add-btn" class="custom-button">Add Movie</button>
-    
+    <!-- Form for adding a new movie hidden -->
     <div class="custom-form" id="form-container" style="display: none;">
       <form id="addMovieForm">
+        <!-- Input fields for movie details -->
         <input type="text" name="title" class="custom-input" placeholder="Title">
         <input type="text" name="genre" class="custom-input" placeholder="Genre">
         <input type="text" name="plot" class="custom-input" placeholder="Plot">
         <input type="date" name="releaseDate" class="custom-input" placeholder="Release Date">
         <input type="text" name="notes" class="custom-input" placeholder="Notes">
         <input type="text" name="rating" class="custom-input" placeholder="Rating">
+        <!-- Button to add a movie -->
         <button id="add-movie-button" class="custom-button">Add Movie</button>
       </form>
     </div>
+
+    <!-- Movie listings -->
+<div class="movie-listings" id="movie-listings">
+  <!-- This is where movie listings will be added dynamically -->
 </div>
-    <div class="movie-listings">
-      <div class="movie">
-        <img src="#" alt="Movie poster">
-        <h2>Movie Title</h2>
-        <i class="fas fa-edit edit-icon"></i>
-        <i class="fas fa-trash delete-icon"></i>
-        <div class="rating">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="far fa-star"></i>
-        </div>
-      </div>
-    </div>
 
   </main>
 
+  <!-- Footer section -->
   <footer>
-    <p>&copy; 2023 Movie Library</p>
+    <p>&copy; 2023 Movie Library</p> 
   </footer>
-  
+
+  <!-- JavaScript files -->
   <script src="public/js/api.js"></script>
   <script src="public/js/addmovie.js"></script>
   <script src="public/js/editmovie.js"></script>
   <script src="public/js/deletemovie.js"></script>
   <script src="public/js/image.js"></script>
+  <script src="public/js/getMovies.js"></script>
 </body>
 </html>
