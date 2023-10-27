@@ -35,6 +35,19 @@ document.addEventListener("DOMContentLoaded", function () {
   
               const deleteIcon = document.createElement('i');
               deleteIcon.classList.add('fas', 'fa-trash', 'delete-icon');
+                
+              // Delete method of the movie
+              deleteIcon.addEventListener('click', () => {
+                const movieId = movie.id;
+                api.delete(`deletemovie?id=${movieId}`)
+                  .then(() => {
+                    // Refresh the movie listings
+                    getAllMoviesAndUpdate();
+                  })
+                  .catch(error => {
+                    console.error(error);
+                  });
+              });
   
               const rating = document.createElement('div');
               rating.classList.add('rating');

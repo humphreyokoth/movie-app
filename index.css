@@ -141,19 +141,25 @@ main {
   border-radius: 10px;
 }
 
-i.fas.fa-trash.delete-icon {
+/* Styles for the edit and delete icons */
+i.fas.fa-trash.delete-icon,
+i.fas.fa-edit.edit-icon {
   padding: 16px;
+  color: #555;
+  cursor: pointer;
 }
 
 i.fas.fa-edit.edit-icon {
-  padding: 16px;
+  float: left; 
 }
 
-.edit-icon,
-.delete-icon {
-  float: right;
-  color: #555;
-  cursor: pointer;
+i.fas.fa-trash.delete-icon {
+  float: right; 
+}
+
+i.fas.fa-edit.edit-icon:hover,
+i.fas.fa-trash.delete-icon:hover {
+  color: #000;
 }
 
 .edit-icon:hover,
