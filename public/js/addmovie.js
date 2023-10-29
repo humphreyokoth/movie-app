@@ -1,48 +1,69 @@
-// Get elements 
-const addMovieBtn = document.getElementById('add-movie-button'); 
-const form = document.getElementById('addMovieForm');
-const formContainer = document.getElementById('form-container');
-
-// Show form when add movie button clicked
-addMovieBtn.addEventListener('click', () => {
-  formContainer.style.display = 'block'; 
-});
-
-// Handle form submit
-const submitBtn = document.getElementById('add-movie');
-submitBtn.addEventListener('click', e => {
-
-  e.preventDefault();
-  // Get form values
-  const title = form.elements['title'].value;
-  const genre = form.elements['genre'].value;
-  const plot = form.elements['plot'].value;
-  const releaseDate = form.elements['releaseDate'].value;
-  const notes = form.elements['notes'].value;
-  const rating = form.elements['rating'].value;
-
-  // Create FormData object
-  const formData = new FormData();
-
-  formData.append('title', title);
-  formData.append('genre', genre);
-  formData.append('plot', plot);
-  formData.append('releaseDate', releaseDate); 
-  formData.append('notes', notes);
-  formData.append('rating', rating);
-
-  api.post('addmovie', formData)
-    .then(res => {
-      if(res.status === 200) {
-         // Reset form
-         form.reset();
-
-         // Hide form container 
-         formContainer.style.display = 'none';
-      }
-    })
-    .catch(err => {
-      console.log(err);
-    });
-
-});
+// Function to add a new movie to the database
+function addMovie(title, genre, plot, releaseDate, notes, rating) {
+    // Data to send in the POST request
+    const movieData = {
+      title,
+      genre,
+      plot,
+      releaseDate,
+      notes,
+      rating,
+    };
+  
+    api
+      .post('addmovie', movieData)
+      .then((response) => {
+        if (response.status === 200) {
+          console.log("success");
+        } else {
+          console.error('Failed to add the movie to the database');
+        }
+      })
+      .catch((error) => {
+        console.error('An error occurred while adding the movie:', error);
+      });
+  }
+  
+  
+  // Event listener for the "Add Movie" button to toggle form visibility
+  const addMovieButton = document.getElementById('add-movie-button');
+  const formContainer = document.getElementById('form-container');
+  
+  addMovieButton.addEventListener('click', function () {
+    // Toggle the visibility of the form
+    if (formContainer.style.display === 'none' || formContainer.style.display === '') {
+      formContainer.style.display = 'block';
+    } else {
+      formContainer.style.display = 'none';
+    }
+  });
+  
+  // Event listener for the movie submission form
+  const movieForm = document.getElementById('addMovieForm');
+  movieForm.addEventListener('submit', function (e) {
+    // Prevent the default form submission
+    e.preventDefault();
+  
+    // Get the input values from the form
+    const title = document.querySelector('input[name="title"]').value;
+    const genre = document.querySelector('input[name="genre"]').value;
+    const plot = document.querySelector('input[name="plot"]').value;
+    const releaseDate = document.querySelector('input[name="releaseDate"]').value;
+    const notes = document.querySelector('input[name="notes"]').value;
+    const rating = document.querySelector('input[name="rating"]').value;
+  
+    // Make a POST request to add the movie to the database using Axios
+    addMovie(title, genre, plot, releaseDate, notes, rating);
+  
+    // Clear the form inputs
+    document.querySelector('input[name="title"]').value = '';
+    document.querySelector('input[name="genre"]').value = '';
+    document.querySelector('input[name="plot"]').value = '';
+    document.querySelector('input[name="releaseDate"]').value = '';
+    document.querySelector('input[name="notes"]').value = '';
+    document.querySelector('input[name="rating"]').value = '';
+  
+    // Hide the form
+    formContainer.style.display = 'none';
+  });
+  
