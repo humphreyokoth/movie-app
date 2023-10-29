@@ -1,30 +1,44 @@
 * {
-  margin: 0;
   padding: 0;
-  box-sizing: border-box;
-
+  margin: 0 auto;
 }
 
-body {
+.main-container{
   font-family: Arial, sans-serif;
   background-color: #f2f2f2;
-  overflow: hidden;
 
+  height: 100vh;
+  /* overflow: hidden; */
+
+  overflow-x: hidden;
+  max-width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+}
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  margin: 0;
 }
 
-header {
-  background-color: #202020;
-  color: #fff;
-  padding: 10px 0;
-}
+.navbar ul {
+  list-style-type: none;
 
-nav {
+  background: black;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  height: 20px;
+  padding: 16px;
+}
+
+.navbar li {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  justify-content: space-evenly;
 }
 
 nav .logo {
@@ -37,29 +51,24 @@ nav ul {
   display: flex;
 }
 
-nav ul li {
-  margin-right: 20px;
-}
 
-nav ul li:last-child {
-  margin-right: 0;
-}
+
+
 
 nav a {
   text-decoration: none;
   color: #fff;
 }
 
-main {
-  height: 100vh;
-  overflow: hidden;
-  max-width: 100%;
-  margin: 20px auto;
-  padding: 0 20px;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  min-height: 600px;
+
+.cards {
+  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 61px;
+  /* border: 1px solid red; */
+  justify-content: space-evenly;
 }
 
 /* Form css */
@@ -69,7 +78,7 @@ main {
 }
 
 .custom-input {
-  width: 100%;
+  width: 80%;
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
@@ -78,18 +87,19 @@ main {
 }
 
 .custom-button {
-  background-color: #007bff;
+  background-color: #4CAF50;
   color: #fff;
   border: none;
   padding: 10px 20px;
   margin-left: 20px;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 90px;
+  height: 41px;
 }
 
 .custom-button:hover {
-  background-color: #0056b3;
+  background-color: #18de53;
 }
 
 
@@ -97,42 +107,54 @@ main {
 
 
 
-.movie-listings {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 150px);
-  grid-gap: 10px;
-  position: relative;
-
+.card {
+  width: 250px;
+  height: 350px;
+  margin: 10px;
+  border: 1px solid #ccc;
 }
 
-.movie {
-  border: 1px solid #3333;
-  margin: 20px;
+
+.card img {
+  width: 100%;
+  height: 260px;
+}
+
+.card h3 {
+  font-size: 16px;
+  padding: 10px;
   position: relative;
 }
 
-.rating {
-  position: relative;
-  bottom: -70px;
+
+
+
+.fa-star {
+  font-size: 20px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.card i {
+ 
+  bottom: 5px;
+  left: 50%;
+
+  padding: 20px;
+  margin: 0px;
+}
+
+.icon-container {
+  display: flex;
+}
+
+.fa-trash {
   left: 10px;
-  color: #ffcc00;
-  font-size: 0;
 }
 
-.rating .fas.fa-star {
-  font-size: 20px;
-}
-
-.rating .fas.fa-star,
-.rating .far.fa-star {
-  margin: 0 1%;
-}
-
-
-.rating .far.fa-star {
-  font-size: 20px;
-  color: #ccc;
+.fa-pencil {
+  left: 15px;
 }
 
 #addMovieDialog {
@@ -141,40 +163,65 @@ main {
   border-radius: 10px;
 }
 
-/* Styles for the edit and delete icons */
-i.fas.fa-trash.delete-icon,
-i.fas.fa-edit.edit-icon {
-  padding: 16px;
-  color: #555;
-  cursor: pointer;
-}
 
-i.fas.fa-edit.edit-icon {
-  float: left; 
-}
-
-i.fas.fa-trash.delete-icon {
-  float: right; 
-}
-
-i.fas.fa-edit.edit-icon:hover,
-i.fas.fa-trash.delete-icon:hover {
-  color: #000;
-}
-
-.edit-icon:hover,
-.delete-icon:hover {
-  color: #000;
-}
 
 /* Backdrop */
 #addMovieDialog::backdrop {
   background: rgba(0, 0, 0, 0.5);
 }
 
-footer {
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 10px;
+
+}
+
+.page-item {
+  margin: 5px;
+}
+
+.page-item.active a {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+.page-item a {
+  text-decoration: none;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.footer {
+  /* position: absolute; */
   text-align: center;
   background-color: #202020;
   color: #fff;
   padding: 10px 0;
+  width: 100%;
+  bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+@media (max-width: 400px) {
+
+  .cards {
+    max-width: 95%;
+    flex-direction: column;
+
+  }
+
+  .card {
+    margin: 22px;
+  }
+
+  .footer {
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 }

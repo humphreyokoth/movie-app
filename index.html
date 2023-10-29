@@ -1,77 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="index.css">
-  <link rel ="stylesheet" href ="public/css/search.css">
+  <link rel="stylesheet" href="public/css/search.css">
   <title>Movie library</title>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
+
 <body>
- 
-  <!-- Header section -->
-  <header>
-    <nav>
-      <!-- Logo of the movie library -->
-      <div class="logo">Movie library</div> 
-  <!-- Search input with a search icon -->
-  <div class="custom-search">
-    <input type="text" class="search-input" placeholder="Search for a movie...">
-    <button class="search-icon"><i class="fas fa-search"></i></button>
-</div>
-
-
-
-      <ul>
-        <!-- Navigation links 
-        <li><a href="#">Login</a></li>
-        <li><a href="#">|</a></li>
-        -->
-        <li><a href="login.html">Logout</a></li> 
-      </ul>
-    </nav>
-  </header>
-
+  <div class="main-container">
+  <nav class="navbar">
+    <ul>
+      <li class="logo">
+        <a href="#">Movies Library</a>
+      </li>
+      <li class="custom-search">
+        <a href="#">
+          <input type="text" class="search-input" placeholder="Search for a movie...">
+          <button class="search-icon"><i class="fas fa-search"></i></button>
+        </a>
+      </li>
+      <li ><a href="login.html">Logout</a></li>
+    </ul>
+  </nav>
   <!-- Add Movie button -->
-  <button id="add-movie-button" class="custom-button">Add Movie</button>
+  <div id="button">
+    <button id="add-movie-button" class="custom-button">Add Movie</button>
+  </div>
 
-  <main>
-    <!-- Form for adding a new movie hidden -->
-    <div class="custom-form" id="form-container" style="display: none;">
-      <form id="addMovieForm">
-        <!-- Input fields for movie details -->
-        <input type="text" name="title" class="custom-input" placeholder="Title">
-        <input type="text" name="genre" class="custom-input" placeholder="Genre">
-        <input type="text" name="plot" class="custom-input" placeholder="Plot">
-        <input type="date" name="releaseDate" class="custom-input" placeholder="Release Date">
-        <input type="text" name="notes" class="custom-input" placeholder="Notes">
-        <input type="text" name="rating" class="custom-input" placeholder="Rating">
-        <!-- Button to add a movie -->
-        <button id="add-movie-button" class="custom-button">Add Movie</button>
-      </form>
+  <!-- Form for adding a new movie hidden -->
+  <div class="custom-form" id="form-container" style="display: none;">
+    <form id="addMovieForm" >
+      <!-- Input fields for movie details -->
+      <input type="text" name="title" class="custom-input" placeholder="Title">
+      <input type="text" name="genre" class="custom-input" placeholder="Genre">
+      <input type="text" name="plot" class="custom-input" placeholder="Plot">
+      <input type="date" name="releaseDate" class="custom-input" placeholder="Release Date">
+      <input type="text" name="notes" class="custom-input" placeholder="Notes">
+      <input type="text" name="rating" class="custom-input" placeholder="Rating">
+      <!-- Button to add a movie -->
+      <button id="add-movie" class="custom-add-movie">Add Movie</button>
+    </form>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <img src="https://placehold.it/225x300">
+      <h3>Movie Title <i class="fa fa-star"></i></h3>
+      <div class="icon-container">
+        <i class="fa fa-trash"></i>
+        <i class="fa fa-pencil"></i> 
+      </div>
     </div>
-
-    <!-- Movie listings -->
-<div class="movie-listings" id="movie-listings">
-  <!-- This is where movie listings will be added dynamically -->
-</div>
-
-  </main>
+    <div class="card">
+      <img src="https://placehold.it/225x300">
+      <h3>Movie Title <i class="fa fa-star"></i></h3>
+      <div class="icon-container">
+        <i class="fa fa-trash"></i>
+        <i class="fa fa-pencil"></i> 
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://placehold.it/225x300">
+      <h3>Movie Title <i class="fa fa-star"></i></h3>
+      <div class="icon-container">
+        <i class="fa fa-trash"></i>
+        <i class="fa fa-pencil"></i> 
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://placehold.it/225x300">
+      <h3>Movie Title <i class="fa fa-star"></i></h3>
+      <div class="icon-container">
+        <i class="fa fa-trash"></i>
+        <i class="fa fa-pencil"></i> 
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://placehold.it/225x300">
+      <h3>Movie Title <i class="fa fa-star"></i></h3>
+      <div class="icon-container">
+        <i class="fa fa-trash"></i>
+        <i class="fa fa-pencil"></i> 
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://placehold.it/225x300">
+      <h3>Movie Title <i class="fa fa-star"></i></h3>
+      <div class="icon-container">
+        <i class="fa fa-trash"></i>
+        <i class="fa fa-pencil"></i> 
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://placehold.it/225x300">
+      <h3>Movie Title <i class="fa fa-star"></i></h3>
+      <div class="icon-container">
+        <i class="fa fa-trash"></i>
+        <i class="fa fa-pencil"></i> 
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://placehold.it/225x300">
+      <h3>Movie Title <i class="fa fa-star"></i></h3>
+      <div class="icon-container">
+        <i class="fa fa-trash"></i>
+        <i class="fa fa-pencil"></i> 
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://placehold.it/225x300">
+      <h3>Movie Title <i class="fa fa-star"></i></h3>
+      <div class="icon-container">
+        <i class="fa fa-trash"></i>
+        <i class="fa fa-pencil"></i> 
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://placehold.it/225x300">
+      <h3>Movie Title <i class="fa fa-star"></i></h3>
+      <div class="icon-container">
+        <i class="fa fa-trash"></i>
+        <i class="fa fa-pencil"></i> 
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://placehold.it/225x300">
+      <h3>Movie Title <i class="fa fa-star"></i></h3>
+      <div class="icon-container">
+        <i class="fa fa-trash"></i>
+        <i class="fa fa-pencil"></i> 
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://placehold.it/225x300">
+      <h3>Movie Title <i class="fa fa-star"></i></h3>
+      <div class="icon-container">
+        <i class="fa fa-trash"></i>
+        <i class="fa fa-pencil"></i> 
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://placehold.it/225x300">
+      <h3>Movie Title <i class="fa fa-star"></i></h3>
+      <div class="icon-container">
+        <i class="fa fa-trash"></i>
+        <i class="fa fa-pencil"></i> 
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://placehold.it/225x300">
+      <h3>Movie Title <i class="fa fa-star"></i></h3>
+      <div class="icon-container">
+        <i class="fa fa-trash"></i>
+        <i class="fa fa-pencil"></i> 
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://placehold.it/225x300">
+      <h3>Movie Title <i class="fa fa-star"></i></h3>
+      <div class="icon-container">
+        <i class="fa fa-trash"></i>
+        <i class="fa fa-pencil"></i> 
+      </div>
+    </div>
+    
+  </div>
+  
+  <div class="pagination">
+    <ul class="pagination">
+      <li class="page-item" id="prev-page"><a href="#">Previous</a></li>
+      <li class="page-item active"><a href="#">1</a></li>
+      <li class="page-item"><a href="#">2</a></li>
+      <!-- Add more page links dynamically based on the number of pages -->
+      <li class="page-item" id="next-page"><a href="#">Next</a></li>
+    </ul>
+  </div>
+  
 
   <!-- Footer section -->
-  <footer>
-    <p>&copy; 2023 Movie Library</p> 
-  </footer>
+  <div class="footer">
+    <p>&copy; 2023 Movie Library</p>
+  </div>
 
   <!-- JavaScript files -->
   <script src="public/js/api.js"></script>
   <script src="public/js/addmovie.js"></script>
-  <script src="public/js/editmovie.js"></script>
-  <!-- <script src="public/js/deletemovie.js"></script> -->
-  <script src="public/js/image.js"></script>
+  <!-- <script src="public/js/editmovie.js"></script>
+  <script src="public/js/deletemovie.js"></script> -->
+  <!-- <script src="public/js/image.js"></script> -->
   <script src="public/js/getMovies.js"></script>
-  <script src ="public/js/search.js"></script>
+  <!-- <script src="public/js/search.js"></script> -->
+</div>
 </body>
+
 </html>
