@@ -37,3 +37,6 @@ const displayMovies = async () => {
 
 }
 
+// Event listeners
+document.addEventListener('DOMContentLoaded', displayMovies);
+
