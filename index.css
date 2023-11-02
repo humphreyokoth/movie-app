@@ -61,6 +61,24 @@ nav a {
 }
 
 
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+#pages {
+  list-style: none;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 0; 
+  margin-bottom: 50px;
+}
+
+
 .cards {
   
   display: flex;
@@ -134,8 +152,16 @@ nav a {
   position: absolute;
   top: 5px;
   right: 5px;
+  top: 0; 
+  right: 0; 
 }
 
+.card i.fa {
+  font-size: 20px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
 .card i {
  
   bottom: 5px;
@@ -147,37 +173,27 @@ nav a {
 
 .icon-container {
   display: flex;
+  position: relative;
 }
 
-.fa-trash {
+i.fa.fa-trash {
   left: 10px;
 }
+
 
 .fa-pencil {
   left: 15px;
 }
-
-#addMovieDialog {
-  border: 1px solid #ccc;
-  padding: 20px;
-  border-radius: 10px;
+div#pagination {
+  margin: -66px;
+  position: relative;
 }
 
 
 
-/* Backdrop */
-#addMovieDialog::backdrop {
-  background: rgba(0, 0, 0, 0.5);
-}
+
 
 /* Pagination */
-.pagination {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  margin: 10px;
-
-}
 
 .page-item {
   margin: 5px;
@@ -196,7 +212,7 @@ nav a {
 }
 
 .footer {
-  /* position: absolute; */
+  position: absolute;
   text-align: center;
   background-color: #202020;
   color: #fff;
@@ -218,8 +234,31 @@ nav a {
   .card {
     margin: 22px;
   }
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 26px;
+}
+
+.page-item {
+  margin: 5px;
+}
+
+.page-item.active a {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+.page-item a {
+  text-decoration: none;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 
   .footer {
+    position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
