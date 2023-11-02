@@ -154,6 +154,8 @@ nav a {
   right: 5px;
   top: 0; 
   right: 0; 
+  color: #fdcc0D;
+
 }
 
 .card i.fa {
@@ -239,6 +241,13 @@ div#pagination {
     justify-content: center;
     list-style: none;
     margin-bottom: 26px;
+}
+div#pagination {
+  margin: -66px;
+  position: relative;
+}
+#pages {
+  margin: 10px 0; 
 }
 
 .page-item {
