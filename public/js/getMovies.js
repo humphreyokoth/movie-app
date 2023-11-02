@@ -36,3 +36,7 @@ const displayMovies = async () => {
   document.querySelector('.cards').innerHTML = cardsHTML;
 
 }
+
+// Event listeners
+document.addEventListener('DOMContentLoaded', displayMovies);
+
