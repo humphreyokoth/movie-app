@@ -19,7 +19,7 @@ form.addEventListener('submit', async (e) => {
  // Get the input values from the form
  const title = document.querySelector('input[name="title"]').value;
  const genre = document.querySelector('input[name="genre"]').value;
- const plot = document.querySelector('input[name="plot"]').value;
+ const plot = document.querySelector('textarea[name="plot"]').value;
  const releaseDate = document.querySelector('input[name="releaseDate"]').value;
  const notes = document.querySelector('input[name="notes"]').value;
  const rating = document.querySelector('input[name="rating"]').value;
