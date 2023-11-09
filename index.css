@@ -3,7 +3,7 @@
   margin: 0 auto;
 }
 
-.main-container{
+.main-container {
   font-family: Arial, sans-serif;
   background-color: #f2f2f2;
 
@@ -15,6 +15,7 @@
   margin: 0 auto;
   height: 100vh;
 }
+
 .navbar {
   position: fixed;
   width: 100%;
@@ -67,6 +68,7 @@ nav a {
   justify-content: space-between;
   height: 100%;
 }
+
 #pages {
   list-style: none;
   margin: 10px;
@@ -74,13 +76,13 @@ nav a {
   justify-content: center;
   align-items: center;
   position: relative;
-  bottom: 0; 
+  bottom: 0;
   margin-bottom: 50px;
 }
 
 
 .cards {
-  
+
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -152,8 +154,8 @@ nav a {
   position: absolute;
   top: 5px;
   right: 5px;
-  top: 0; 
-  right: 0; 
+  top: 0;
+  right: 0;
   color: #fdcc0D;
 
 }
@@ -164,8 +166,9 @@ nav a {
   top: 5px;
   right: 5px;
 }
+
 .card i {
- 
+
   bottom: 5px;
   left: 50%;
 
@@ -186,6 +189,7 @@ i.fa.fa-trash {
 .fa-pencil {
   left: 15px;
 }
+
 div#pagination {
   margin: -66px;
   position: relative;
@@ -221,8 +225,8 @@ div#pagination {
   padding: 10px 0;
   width: 100%;
   bottom: 0;
-    left: 0;
-    right: 0;
+  left: 0;
+  right: 0;
 }
 
 @media (max-width: 400px) {
@@ -236,35 +240,38 @@ div#pagination {
   .card {
     margin: 22px;
   }
-.pagination {
+
+  .pagination {
     display: flex;
     justify-content: center;
     list-style: none;
     margin-bottom: 26px;
-}
-div#pagination {
-  margin: -66px;
-  position: relative;
-}
-#pages {
-  margin: 10px 0; 
-}
+  }
 
-.page-item {
-  margin: 5px;
-}
+  div#pagination {
+    margin: -66px;
+    position: relative;
+  }
 
-.page-item.active a {
-  background-color: #4CAF50;
-  color: #fff;
-}
+  #pages {
+    margin: 10px 0;
+  }
 
-.page-item a {
-  text-decoration: none;
-  padding: 5px 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
+  .page-item {
+    margin: 5px;
+  }
+
+  .page-item.active a {
+    background-color: #4CAF50;
+    color: #fff;
+  }
+
+  .page-item a {
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
 
   .footer {
     position: absolute;

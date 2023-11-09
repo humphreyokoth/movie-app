@@ -17,6 +17,7 @@ form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
  // Get the input values from the form
+ const image = document.querySelector('input[name="image"]').value;
  const title = document.querySelector('input[name="title"]').value;
  const genre = document.querySelector('input[name="genre"]').value;
  const plot = document.querySelector('textarea[name="plot"]').value;
@@ -25,6 +26,7 @@ form.addEventListener('submit', async (e) => {
  const rating = document.querySelector('input[name="rating"]').value;
   
   const movieData = {
+    image,
     title,
     genre,
     plot,
