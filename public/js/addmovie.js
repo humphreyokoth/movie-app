@@ -40,11 +40,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const imageInput = document.querySelector('input[name="image"]');
   let imageFile;
 
-  // Event listener to update the imageFile variable when a file is selected
+  // Event listener to update the imageFile variable and label text when a file is selected
   imageInput.addEventListener("change", (e) => {
-    if (e.target.files.length > 0) {
-      imageFile = e.target.files[0];
-    }
+    imageFile = e.target.files.length > 0 ? e.target.files[0] : null;
+    document.getElementById("image-label").textContent = imageFile ? imageFile.name : "Add movie image...";
   });
 
   // Event listener to handle form submission
