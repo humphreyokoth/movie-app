@@ -119,12 +119,39 @@ nav a {
 }
 
 .custom-button:hover {
-  background-color: #18de53;
+  background-color: #4CAF50;
 }
 
+#add-movie{
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
 
+  border-radius: 5px;
+  cursor: pointer;
+ 
+  height: 41px;
+}
 
+/* Custom movie image input */
+.custom-input-label {
+  display: inline-block;
+  padding: 8px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  
+}
 
+.custom-input-image {
+  display: none; 
+}
 
 
 .card {

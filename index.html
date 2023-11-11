@@ -34,9 +34,12 @@
 
     <!-- Form for adding a new movie hidden -->
     <div class="custom-form" id="form-container" style="display: none;">
-      <form id="addMovieForm">
+      <form id="addMovieForm" method="POST" enctype="multipart/form-data">
         <!-- Input fields for movie details -->
-        <input type="file" name="image" class="custom-input" placeholder="Image">
+        <div class="file-input-container">
+          <label for="image" class="custom-input-label">Add movie image...</label>
+          <input type="file" name="image" id="image" class="custom-input-image" accept="image/*" multiple>
+        </div>
         <input type="text" name="title" class="custom-input" placeholder="Title">
         <input type="text" name="genre" class="custom-input" placeholder="Genre">
         <textarea id="text" name="plot"class="custom-input" rows="4" cols="50"></textarea>

@@ -1,9 +1,9 @@
 // Get movies from API
 const getMovies = () => {
-  return api.get("getallmoviesimage")
+  return api.get("getmovies")
     .then(response => {
-      console.log(response.data.movies);
-      return response.data.movies;
+      console.log(response.data.getMovieList);
+      return response.data.getMovieList;
     })
     .catch(error => {
       console.log(error);
@@ -26,19 +26,19 @@ const deleteMovie = (id) => {
 // Display movies
 const displayMovies = () => {
   return getMovies()
-    .then(movies => {
+    .then(getMovieList => {
       let cardsHTML = "";
 
-      movies.forEach((movie) => {
-        const { title } = movie;
-        // check for the ratings object
+      getMovieList.forEach((movie) => {
+        const {title } = movie;
+        // check for the ratings object using a ternary operator
         const imdbRating = movie.ratings ? JSON.parse(movie.ratings).imdb : "N/A";
 
         let imgSrc;
         // Getting image for a particular movie
-        if (movie.imageUrls && movie.imageUrls.length > 0) {
+        if (movie.imageUrl && movie.imageUrl.length > 0) {
           console.log("Image URL:", imgSrc); 
-          imgSrc = `${'http://localhost:5000/api/v1/'}${movie.imageUrls[0]}`;
+          imgSrc = `${'http://localhost:5000/api/v1/'}${movie.imageUrl}`;
         }
         console.log("Final Image URL:", imgSrc);
         const cardHTML = `
