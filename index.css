@@ -5,7 +5,7 @@
 
 .main-container {
   font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
+  background-color: #212121;
 
   height: 100vh;
   /* overflow: hidden; */
@@ -171,6 +171,7 @@ nav a {
   font-size: 16px;
   padding: 10px;
   position: relative;
+  color: #ccc;
 }
 
 
@@ -201,6 +202,7 @@ nav a {
 
   padding: 20px;
   margin: 0px;
+  
 }
 
 .icon-container {
@@ -210,11 +212,13 @@ nav a {
 
 i.fa.fa-trash {
   left: 10px;
+  color: #ccc;
 }
 
 
 .fa-pencil {
   left: 15px;
+  color: #ccc;
 }
 
 div#pagination {
