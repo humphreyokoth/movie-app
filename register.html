@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie app register</title>
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="public/css/register.css">
 </head>
 <body>
     <div class="container">
-        <form action="/login.html"> <!-- Change the action to your login page URL -->
+        <form id="registerForm" method="post"> 
             <!-- <img class="image" src="/image" alt="movielibrary"> -->
             <h1 class="h3">Sign up to use Movie library</h1>
             <div class="form-floating">
@@ -32,5 +32,7 @@
             <p class="mt-5 mb-3 text-muted">&copy; 2017–2023</p>
         </form>
     </div>
+    <script src="public/js/api.js"></script>
+    <script src="public/js/register.js"></script>
 </body>
 </html>

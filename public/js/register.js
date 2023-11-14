@@ -7,26 +7,26 @@ document.addEventListener('DOMContentLoaded', () => {
     function handleSubmit(e) {
       e.preventDefault();
   
-   
+      const name = document.getElementById('name').value;
       const email = document.getElementById('email').value;
       const password = document.getElementById('password').value;
   
-      loginUser( email, password)
+      registerUser(name, email, password)
         .then(response => {
             console.log(response)
           if (response.data.success) 
-            window.location.href = 'index.html';
+            window.location.href = 'login.html';
         })
         .catch(error => {
-          console.log('login failed:', error);
+          console.log('Registration failed:', error);
         });
     }
   
-    function loginUser(email, password) {
+    function registerUser(name, email, password) {
       return new Promise((resolve, reject) => {
-        const url = 'login';
+        const url = 'register';
   
-        api.post(url, {email, password})
+        api.post(url, {name, email, password})
           .then(response => {
             resolve(response);
           })
