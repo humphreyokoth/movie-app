@@ -1,4 +1,4 @@
-# movie-app
+# movie-app version 1
 Welcome to the Movie App HTML Version project! This README will guide you through setting up the development environment, understanding the project structure, and how to contribute to the development of this HTML-based application.
 
 ## Table of Contents
