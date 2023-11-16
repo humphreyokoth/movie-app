@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => {
             console.log(response)
           if (response.data.success) 
-            window.location.href = 'index.html';
+            window.location.href = 'dashboard.html';
         })
         .catch(error => {
           console.log('login failed:', error);

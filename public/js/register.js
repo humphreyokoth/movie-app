@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => {
             console.log(response)
           if (response.data.success) 
-            window.location.href = 'login.html';
+            window.location.href = 'index.html';
         })
         .catch(error => {
           console.log('Registration failed:', error);
